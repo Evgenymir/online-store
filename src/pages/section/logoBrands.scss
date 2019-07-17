@@ -1,0 +1,123 @@
+.b-logoBrands {
+	background-color: $white;
+	padding: 52px 0;
+
+	@include tablets {
+		padding: 40px 0;
+	}
+
+	@include mobile {
+		padding: 30px 0;
+
+		.b-container {
+			padding: 0;
+		}
+	}
+}
+
+.b-logoBrands-slider {
+	position: relative;
+}
+
+.b-logoBrands-slider__content {
+
+	.slick-slide {
+		@include inlineBlock(middle);
+		float: none;
+	}
+
+	@include tablets {
+		width: 90%;
+		margin: 0 auto;
+	}
+
+	@include mobile {
+		width: 100%;
+
+		.slick-slide {
+			width: 180px;
+		}
+	}
+}
+
+.b-logoBrands-slider__item {
+	text-align: center;
+
+	img {
+		@include inlineBlock();
+	}
+}
+
+.b-logoBrands-slider__controls {
+	@include mobile {
+		display: none;
+	}
+}
+
+.b-logoBrands-slider__control {
+	width: 25px;
+	height: 48px;
+	position: absolute;
+	top: 50%;
+	margin-top: -24px;
+	cursor: pointer;
+
+	svg {
+		fill: #bec3c6;
+		transition: fill ease 0.3s;
+	}
+
+	&:hover {
+		svg {
+			fill: $red;
+		}
+	}
+}
+
+.b-logoBrands-slide-prev {
+	left: -23px;
+
+	@include tablets {
+		left: 0;
+	}
+}
+
+.b-logoBrands-slide-next {
+	right: -23px;
+	text-align: right;
+
+	@include tablets {
+		right: 0;
+	}
+}
+
+.b-logoBrands-slider__dots {
+	@include reset-list();
+	text-align: center;
+	font-size: 0;
+	padding-top: 30px;
+
+	li {
+		@include inlineBlock(middle);
+		margin-right: 5px;
+
+		&:last-child {
+			margin-right: 0;
+		}
+
+		&.slick-active {
+			button {
+				background-color: $red;
+			}
+		}
+	}
+
+	button {
+		@include reset-button();
+		display: block;
+		width: 40px;
+		height: 3px;
+		background-color: #9D9C9C;
+		text-indent: -99999px;
+	}
+}
