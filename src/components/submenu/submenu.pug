@@ -1,0 +1,16 @@
+-
+mixin submenu(items)
+	nav.b-submenu
+		ul.b-submenu__list
+			each item in items
+				li.b-submenu__item
+					a.b-submenu__link(href=item.href) #{item.text}
+-;
+
++submenu([
+	{"href": "#", "text": "Как сделать заказ"},
+	{"href": "#", "text": "Доставка"},
+	{"href": "#", "text": "Оплата"},
+	{"href": "#", "text": "Возврат и обмен"},
+	{"href": "#", "text": "Вакансии"}
+])

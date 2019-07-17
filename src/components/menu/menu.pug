@@ -1,0 +1,18 @@
+//- Миксин меню
+-
+mixin menu(items)
+	nav.b-menu
+		ul.b-menu__list
+			each item in items
+				li.b-menu__item(class= {active : currentURL == item.href})
+					a.b-menu__link(href=item.href) #{item.title}
+-;
+
+//- Добавляем меню
++menu([
+	{'title': 'Мужское', 'href': 'index.html'},
+	{'title': 'Женское', 'href': '#'},
+	{'title': 'Sale', 'href': '#'},
+	{'title': 'О нас', 'href': '#'},
+	{'title': 'Контакты', 'href': '#'}
+])

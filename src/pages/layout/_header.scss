@@ -1,0 +1,302 @@
+.b-header-rowOne {
+	background-color: $blue;
+	padding: 6px 0;
+
+	&.is-hide {
+		display: none;
+	}
+}
+
+.b-header-discount {
+	position: relative;
+}
+
+.b-header-discount__text {
+	font-size: rem(12px);
+	color: $white;
+	line-height: 15px;
+	text-transform: uppercase;
+	text-align: center;
+	letter-spacing: 0.08em;
+	padding-right: 15px;
+
+	strong {
+		font-size: rem(14px);
+	}
+
+	@include tablets {
+		font-size: rem(10px);
+		line-height: 13px;
+	}
+}
+
+.b-header-discount__close {
+	width: 16px;
+	height: 16px;
+	cursor: pointer;
+	position: absolute;
+	top: -1px;
+	right: 0;
+}
+
+.b-header-discount__close-line {
+	width: 100%;
+	height: 2px;
+	background-color: #25505E;
+	position: absolute;
+	top: 7px;
+
+	&:first-child {
+		transform: rotate(45deg);
+	}
+
+	&:last-child {
+		transform: rotate(-45deg);
+	}
+}
+
+.b-header-rowTwo {
+	background-color: $brown;
+	padding: 10px 0;
+
+	@include tablets-landscape {
+		display: none;
+	}
+}
+
+.b-header-rowTwo__flex {
+	@include flex(space-between);
+}
+
+.b-header-rowTwo__left {
+	width: 50%;
+}
+
+.b-header-rowTwo__right {
+	width: 50%;
+	text-align: right;
+}
+
+.b-geolocation {
+	@include inlineBlock(middle);
+	position: relative;
+	font-size: rem(14px);
+	color: $grey;
+	line-height: 17px;
+	text-decoration: none;
+	padding-left: 18px;
+	transition: color ease 0.3s;
+
+	&:hover {
+		color: $white;
+
+		.b-geolocation__icon {
+			fill: $white;
+		}
+	}
+}
+
+.b-geolocation__icon {
+	position: absolute;
+	top: 0;
+	left: 0;
+	fill: $grey;
+	transition: fill ease 0.3s;
+}
+
+.b-login,
+.b-registration {
+	@include inlineBlock(middle);
+	font-size: rem(14px);
+	color: $grey;
+	line-height: 17px;
+	text-decoration: none;
+	text-transform: uppercase;
+	transition: color ease 0.3s;
+
+	&:hover {
+		color: $white;
+	}
+}
+
+.b-login {
+	margin-left: 40px;
+}
+
+.b-registration {
+	margin-left: 20px;
+}
+
+.b-header-rowThree {
+	background-color: $blackTwo;
+
+	@include tablets-landscape {
+		padding: 10px 0;
+	}
+
+	@include tablets {
+		background-color: #232323;
+	}
+}
+
+.b-header-rowThree__flex {
+	@include flex(space-between);
+
+	@include tablets {
+		align-items: center;
+	}
+}
+
+.b-header-rowThree__left {
+	@include flex();
+	align-items: center;
+	flex-wrap: nowrap;
+	width: 50%;
+
+	@include tablets-landscape {
+		width: 35%;
+	}
+
+	@include tablets {
+		width: 50%;
+		display: block;
+	}
+
+	@include mobile {
+		width: 65%;
+	}
+}
+
+.b-header-rowThree__right {
+	@include flex(space-between);
+	align-items: center;
+	flex-wrap: nowrap;
+	width: 42%;
+
+	@include tablets-landscape {
+		width: 65%;
+	}
+
+	@include tablets {
+		width: 50%;
+		display: block;
+		text-align: right;
+	}
+
+	@include mobile {
+		width: 35%;
+	}
+}
+
+.b-info-phone {
+	min-width: 185px;
+	margin-right: 2%;
+
+	@include tablets {
+		display: none;
+	}
+}
+
+.b-info-phone__text {
+	@include proxima(light);
+	font-size: rem(14px);
+	line-height: rem(17px);
+	color: $grey;
+	margin-bottom: 2px;
+}
+
+.b-info-phone__link {
+	display: block;
+	@include proxima(light);
+	font-size: rem(22px);
+	line-height: rem(27px);
+	text-decoration: none;
+	color: $white;
+
+	span {
+		@include proxima(semibold);
+	}
+}
+
+.b-serach-form {
+	position: relative;
+	width: 100%;
+	max-width: 230px;
+
+	@include tablets-landscape {
+		max-width: 330px;
+	}
+
+	@include tablets {
+		display: none;
+	}
+}
+
+.b-input-search {
+	width: 100%;
+	height: 30px;
+	border: none;
+	border-bottom: 1px solid $inputSearchBorder;
+	background-color: transparent;
+	font-size: rem(14px);
+	color: $white;
+	padding: 0 20px 0 10px;
+}
+
+.b-button-search {
+	@include reset-button();
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+
+.b-user-entry {
+	display: none;
+	width: 20px;
+	height: 20px;
+
+	@include tablets {
+		@include inlineBlock(middle);
+	}
+}
+
+.b-cart-link {
+	@include inlineBlock(middle);
+	position: relative;
+	padding-top: 5px;
+	padding-right: 10px;
+	margin-left: 2%;
+
+	@include tablets {
+		margin-left: 18px;
+	}
+}
+
+.b-cart-link__number {
+	@include proxima(light);
+	display: block;
+	width: 19px;
+	height: 19px;
+	position: absolute;
+	top: 0;
+	right: 0;
+	background-color: $red;
+	border-radius: 50%;
+	font-size: rem(10px);
+	color: $white;
+	text-align: center;
+	line-height: 19px;
+
+	&.hide {
+		display: none;
+	}
+}
+
+.b-cart-link__icon {
+	fill: $white;
+
+	@include tablets {
+		width: 25px;
+		height: 25px;
+	}
+}

@@ -1,0 +1,19 @@
+.b-menu {}
+
+.b-menu__list {
+	@include reset-list();
+}
+
+.b-menu__item {
+	@include inlineBlock(middle);
+}
+
+.b-menu__link {
+	position: relative;
+	display: block;
+	font-size: rem(18px);
+	color: #000;
+	line-height: 1;
+	text-decoration: none;
+	padding: 20px 15px;
+}

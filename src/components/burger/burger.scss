@@ -1,0 +1,24 @@
+$burgerLineColor: $white;
+
+.b-burger {
+	display: none;
+	width: 28px;
+	height: 20px;
+	cursor: pointer;
+
+	@include tablets-landscape {
+		@include inlineBlock(middle);
+		margin-right: 16px;
+	}
+}
+
+.b-burger__line {
+	width: 100%;
+	height: 2px;
+	background-color: $burgerLineColor;
+	border-radius: 2px;
+	
+	&:not(:last-child) {
+		margin-bottom: 7px;
+	}
+}

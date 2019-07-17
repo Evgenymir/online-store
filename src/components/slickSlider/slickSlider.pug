@@ -1,0 +1,38 @@
+-
+mixin slickItem
+	.b-slider__item
+		if block
+			block
+		else
+-;
+
+
+.b-slider
+	.b-slider__content.j-slider
+		+slickItem
+			.b-slider__item-flex
+				h2.b-slider__item-title We need the tonic of <br /> wildness
+				+button('#', 'Read more')(class="")
+		+slickItem
+			.b-slider__item-flex
+				h2.b-slider__item-title We need the tonic of <br /> wildness
+				+button('#', 'Read more')(class="")
+		+slickItem
+			.b-slider__item-flex
+				h2.b-slider__item-title We need the tonic of <br /> wildness
+				+button('#', 'Read more')(class="")
+		+slickItem
+			.b-slider__item-flex
+				h2.b-slider__item-title We need the tonic of <br /> wildness
+				+button('#', 'Read more')(class="")
+		+slickItem
+			.b-slider__item-flex
+				h2.b-slider__item-title We need the tonic of <br /> wildness
+				+button('#', 'Read more')(class="")
+	.b-slider__controls
+		.b-slider__control.prev.j-prev
+			svg(width="31px" height="31")
+				use(xlink:href="#icon-arrowLeft")
+		.b-slider__control.next.j-next
+			svg(width="31px" height="31")
+				use(xlink:href="#icon-arrowRight")

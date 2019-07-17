@@ -1,0 +1,29 @@
+$buttonColor: red;
+$buttonColorHover: #fff;
+
+.b-button {
+	@include inlineBlock();
+	// @include encore(light);
+	position: relative;
+	min-width: 205px;
+	font-size: rem(24px);
+	color: $buttonColor;
+	text-align: center;
+	line-height: 18px;
+	text-decoration: none;
+	background-color: transparent;
+	border: 2px solid $buttonColor;
+	border-radius: 5px;
+	cursor: pointer;
+	padding: 18px 10px;
+	transition: color, background-color, ease 0.3s;
+
+	&:hover {
+		color: $buttonColorHover;
+		background-color: $buttonColor;
+
+		&+.b-mainScreen__mouse {
+			opacity: 1;
+		}
+	}
+}

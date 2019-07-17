@@ -1,0 +1,25 @@
+.b-submenu {
+	width: 100%;
+	max-width: 510px;
+}
+
+.b-submenu__list {
+	@include reset-list();
+	@include flex(space-between);
+}
+
+.b-submenu__item {
+
+}
+
+.b-submenu__link {
+	font-size: rem(14px);
+	color: $grey;
+	line-height: 17px;
+	text-decoration: none;
+	transition: color ease 0.3s;
+
+	&:hover {
+		color: $white;
+	}
+}

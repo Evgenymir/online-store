@@ -1,0 +1,26 @@
+$white: #fff;
+
+.b-anchor {
+	@include inlineBlock();
+	position: relative;
+	font-size: rem(14px);
+	color: $white;
+	text-decoration: none;
+	padding-bottom: 20px;
+	cursor: pointer;
+
+	&:before {
+		content: "";
+		width: 10px;
+		height: 10px;
+		border: 2px solid $white;
+		border-top: 0;
+		border-left: 0;
+		border-radius: 0 0 3px 0;
+		position: absolute;
+		top: 50%;
+		left: 0; right: 0;
+		margin: auto;
+		transform: rotate(45deg);
+	}
+}

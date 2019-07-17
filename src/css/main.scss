@@ -1,0 +1,35 @@
+// vars
+$text: #484848;
+$white: #fff;
+$black: #000000;
+$blackTwo: #171717;
+$blue: #01b0cb;
+$blueLight: #E8F0F3;
+$grey: #b0b0b0;
+$greyLight: #afafaf;
+$greyDark: #484848;
+$title: #131313;
+$red: #cc1e2c;
+$brown: #4f4f4f;
+$inputSearchBorder: #505050;
+
+// layout
+@import "_misc/font";
+@import "_misc/mixins";
+@import "_misc/normalize";
+@import "_misc/setting";
+
+// components
+@import "../components/submenu/submenu";
+@import "../components/burger/burger";
+@import "../components/logo/logo";
+@import "../components/menu/menu";
+
+// style
+@import "../pages/layout/_layout";
+@import "../pages/layout/_header";
+@import "../pages/index";
+@import "../pages/layout/_footer";
+
+// media queris
+@import "../css/adaptive/adaptive";

@@ -1,0 +1,18 @@
+- 
+mixin mobileMenu(items)
+	ul.b-mobileMenu__list.j-mobileMenu__list
+		each item in items
+			li.b-mobileMenu__item
+				a.b-mobileMenu__link.j-mobileMenu__link(href=item.href) #{item.text}
+-;
+
+nav.b-mobileMenu.j-mobileMenu
+	.b-mobileMenu__close.j-mobileMenu__close
+		.b-mobileMenu__close-line
+		.b-mobileMenu__close-line
+	+mobileMenu([
+		{"href": "#b-about", "text": "Обо мне"},
+		{"href": "#b-skills", "text": "Навыки"},
+		{"href": "#b-works", "text": "Мои работы"},
+		{"href": "#b-contact", "text": "Контакты"}
+	])

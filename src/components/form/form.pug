@@ -1,0 +1,16 @@
+form.b-form.j-form(method="POST" action="" enctype="multipart/form-data")
+	label.b-form__label
+		input.b-form__input(type="text" name="name" placeholder="Ваше имя")
+		span.b-form__error Введите имя
+	label.b-form__label
+		input.b-form__input(type="email" name="email" placeholder="Ваш email")
+		span.b-form__error Введите email
+	textarea.b-form__textarea(name="message" placeholder="Ваше сообщение")
+	button.b-form__button(type="submit") Отправить
+
+.b-popup-thanks.j-popup-thanks
+	.b-popup-thanks__close.j-popup-thanks__close
+		.b-popup-thanks__close-line
+		.b-popup-thanks__close-line
+	.b-popup-thanks__content
+		h3.b-popup-thanks__title Thanks for sending, our manager will contact you soon!

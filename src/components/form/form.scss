@@ -1,0 +1,147 @@
+.b-form {
+	width: 430px;
+	text-align: center;
+	background-color: rgba(#fff, .8);
+	padding: 40px;
+	border: 1px solid red;
+
+	@include tablets {
+		width: 350px;
+	}
+
+	@include phone {
+		width: 100%;
+		padding: 30px;
+	}
+}
+
+.b-form__label {
+	display: block;
+	margin-bottom: 15px;
+
+	&.has-error {
+		.b-form__input {
+			border-color: red;
+		}
+
+		.b-form__error {
+			display: block;
+		}
+	}
+
+	&.is-success {
+		.b-form__input {
+			border-color: green;
+		}
+	}
+
+	@include tablets {
+		margin-bottom: 10px;
+	}
+}
+
+.b-form__input {
+	// @include o(light);
+	width: 100%;
+	height: 30px;
+	font-size: rem(14px);
+	line-height: 14px;
+	border: 1px solid #000;
+	background-color: #fff;
+	padding: 10px 17px;
+}
+
+.b-form__textarea {
+	// @include o(light);
+	width: 100%;
+	height: 80px;
+	font-size: rem(14px);
+	line-height: 14px;
+	border: 1px solid #000;
+	background-color: #fff;
+	padding: 10px 17px;
+	margin-bottom: 30px;
+	resize: none;
+
+	@include tablets {
+		margin-bottom: 20px;
+	}
+}
+
+.b-form__error {
+	// @include o(light);
+	display: none;
+	font-size: rem(14px);
+	color: red;
+	text-align: right;
+	line-height: 12px;
+}
+
+.b-form__button {
+	@include reset-button();
+	border: 1px solid #000;
+}
+
+// Попап спасибо
+
+.b-popup-thanks {
+	position: fixed;
+	top: 50%; left: -120%;
+	z-index: 10;
+	width: 400px;
+	background-color: green;
+	border-radius: 10px;
+	padding: 40px;
+	transform: translate(-50%, -50%);
+	transition: left ease 0.5s;
+
+	&.is-active {
+		left: 50%;
+	}
+
+	@include phone {
+		width: 90%;
+		padding: 30px 20px;
+	}
+}
+
+.b-popup-thanks__close {
+	width: 20px;
+	height: 20px;
+	cursor: pointer;
+	position: absolute;
+	top: 15px;
+	right: 15px;
+}
+
+.b-popup-thanks__close-line {
+	width: 100%;
+	height: 4px;
+	background-color: #fff;
+	position: absolute;
+	top: 8px;
+
+	&:first-child {
+		transform: rotate(45deg);
+	}
+
+	&:last-child {
+		transform: rotate(-45deg);
+	}
+}
+
+.b-popup-thanks__content {
+	text-align: center;
+}
+
+.b-popup-thanks__title {
+	font-size: rem(30px);
+	line-height: 36px;
+	color: $white;
+	margin: 0;
+
+	@include phone {
+		font-size: rem(26px);
+		line-height: 32px;
+	}
+}

@@ -1,0 +1,45 @@
+//- Подключаем конфиг с переменными
+block config
+	include _config.pug
+
+//- Подключаем компоненты с миксинами
+
+
+doctype html
+html(lang="ru-RU")
+	head
+		include _head.pug
+		block title 
+			title #{headTitle}
+
+		//css
+		block cssLinks
+			link(rel="stylesheet" href=cssPath+"/main.css")
+
+	body
+		
+		// Шапка
+		
+		header.l-header
+			include _header.pug
+
+		// Контент
+		main.l-content
+			block content
+
+		// Подвал
+		footer.l-footer
+			include _footer.pug
+
+		// Мобильное меню
+		//- include ../../components/mobileMenu/mobileMenu
+
+		// Темная подложка
+		//- include ../../components/overlay/overlay
+
+		// Спрайт
+		include sprite.html
+					
+		// script
+		block scripts
+			script(src="./js/app.min.js")

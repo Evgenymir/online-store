@@ -1,0 +1,126 @@
+// font
+@font-face {
+    font-family: 'proxima_novaregular';
+    src: url('../fonts/proximanova-regular.eot');
+    src: url('../fonts/proximanova-regular.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/proximanova-regular.woff2') format('woff2'),
+         url('../fonts/proximanova-regular.woff') format('woff'),
+         url('../fonts/proximanova-regular.ttf') format('truetype'),
+         url('../fonts/proximanova-regular.svg#proxima_novaregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'proxima_novasemibold';
+    src: url('../fonts/proximanova-semibold.eot');
+    src: url('../fonts/proximanova-semibold.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/proximanova-semibold.woff2') format('woff2'),
+         url('../fonts/proximanova-semibold.woff') format('woff'),
+         url('../fonts/proximanova-semibold.ttf') format('truetype'),
+         url('../fonts/proximanova-semibold.svg#proxima_novasemibold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'proxima_novathin';
+    src: url('../fonts/proximanova-thin.eot');
+    src: url('../fonts/proximanova-thin.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/proximanova-thin.woff2') format('woff2'),
+         url('../fonts/proximanova-thin.woff') format('woff'),
+         url('../fonts/proximanova-thin.ttf') format('truetype'),
+         url('../fonts/proximanova-thin.svg#proxima_novathin') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'proxima_novabold';
+    src: url('../fonts/proximanova-bold.eot');
+    src: url('../fonts/proximanova-bold.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/proximanova-bold.woff2') format('woff2'),
+         url('../fonts/proximanova-bold.woff') format('woff'),
+         url('../fonts/proximanova-bold.ttf') format('truetype'),
+         url('../fonts/proximanova-bold.svg#proxima_novabold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'proxima_novalight';
+    src: url('../fonts/proximanova-light.eot');
+    src: url('../fonts/proximanova-light.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/proximanova-light.woff2') format('woff2'),
+         url('../fonts/proximanova-light.woff') format('woff'),
+         url('../fonts/proximanova-light.ttf') format('truetype'),
+         url('../fonts/proximanova-light.svg#proxima_novalight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'bebas_neuebold';
+    src: url('../fonts/bebasneue_bold.eot');
+    src: url('../fonts/bebasneue_bold.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/bebasneue_bold.woff2') format('woff2'),
+         url('../fonts/bebasneue_bold.woff') format('woff'),
+         url('../fonts/bebasneue_bold.ttf') format('truetype'),
+         url('../fonts/bebasneue_bold.svg#bebas_neuebold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'bebas_neuebook';
+    src: url('../fonts/bebasneue_book.eot');
+    src: url('../fonts/bebasneue_book.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/bebasneue_book.woff2') format('woff2'),
+         url('../fonts/bebasneue_book.woff') format('woff'),
+         url('../fonts/bebasneue_book.ttf') format('truetype'),
+         url('../fonts/bebasneue_book.svg#bebas_neuebook') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+// font_mixin
+
+@mixin proxima($style: regular) {
+	@if $style == light {
+		font-family: 'proxima_novalight', Arial, sans-serif;
+	}
+
+	@if $style == regular {
+		font-family: 'proxima_novaregular', Arial, sans-serif;
+	}
+
+	@if $style == semibold {
+		font-family: 'proxima_novasemibold', Arial, sans-serif;
+	}
+
+	@if $style == bold {
+		font-family: 'proxima_novabold', Arial, sans-serif;
+	}
+
+	@if $style == thin {
+		font-family: 'proxima_novathin', Arial, sans-serif;
+	}
+}
+
+@mixin bebas($style: bold) {
+
+	@if $style == bold {
+		font-family: 'bebas_neuebold';
+	}
+
+	@if $style == book {
+		font-family: 'bebas_neuebook';
+	}
+}

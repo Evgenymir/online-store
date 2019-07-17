@@ -1,0 +1,57 @@
+$linkColor: $white;
+$linkBorderColor: $red;
+
+.b-menu {
+ 	width: 73%;
+ 	margin-left: 8%;
+
+ 	@include tablets-landscape {
+		display: none;
+	}
+}
+
+.b-menu__list {
+	@include reset-list();
+	@include flex(space-between);
+	padding-top: 32px;
+}
+
+.b-menu__item {
+	&.active {
+		.b-menu__link {
+			&:before {
+				width: 100%;
+			}
+		}
+	}
+}
+
+.b-menu__link {
+	display: block;
+	@include proxima(light);
+	font-size: rem(14px);
+	color: $linkColor;
+	line-height: 17px;
+	text-transform: uppercase;
+	text-decoration: none;
+	position: relative;
+	padding-bottom: 24px;
+	transition: color ease 0.3s;
+
+	&:before {
+		content: "";
+		width: 0;
+		height: 4px;
+		background-color: $linkBorderColor;
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		transition: width ease 0.3s;
+	}
+
+	&:hover {
+		&:before {
+			width: 100%;
+		}
+	}
+}

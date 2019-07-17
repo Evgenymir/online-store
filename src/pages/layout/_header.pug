@@ -1,0 +1,47 @@
+.b-header-rowOne.j-header-discount
+	.b-container
+		.b-header-discount
+			p.b-header-discount__text Да здравствует потребительство! с 23 по 26 ноября скидки до 
+				strong 50% 
+				| в честь &laquo;черной пятницы&raquo;
+			.b-header-discount__close.j-header-discount__close
+				.b-header-discount__close-line
+				.b-header-discount__close-line
+
+.b-header-rowTwo
+	.b-container
+		.b-header-rowTwo__flex
+			.b-header-rowTwo__left
+				include ../../components/submenu/submenu
+			.b-header-rowTwo__right
+				a.b-geolocation(href="#") Санкт-Петербург
+					svg.b-geolocation__icon(width="12px" height="16px")
+						use(xlink:href="#icon-mark")
+				a.b-login(href="#") Вход
+				a.b-registration(href="#") Регистрация
+
+.b-header-rowThree
+	.b-container
+		.b-header-rowThree__flex
+			.b-header-rowThree__left
+				include ../../components/burger/burger
+				include ../../components/logo/logo
+				include ../../components/menu/menu
+			.b-header-rowThree__right
+				.b-info-phone
+					p.b-info-phone__text пн-пт, 11:00–18:00
+					a.b-info-phone__link(href="tel:+78005001739") +7 (800) 
+						span 500-17-39
+				form.b-serach-form(action="" method="get" enctype="multipart/form/data")
+					input.b-input-search(type="search")
+					button.b-button-search(type="submit")
+						svg.b-button-search__icon(width="22px" height="24px")
+							use(xlink:href="#icon-search")
+				a.b-user-entry(href="#")
+					svg.b-user-entry__icon(width="20px" height="20px")
+						use(xlink:href="#icon-user")
+				a.b-cart-link(href="#")
+					// Для скрытия span добавить класс hide
+					span.b-cart-link__number 51
+					svg.b-cart-link__icon(width="31px" height="28px")
+						use(xlink:href="#icon-cart")

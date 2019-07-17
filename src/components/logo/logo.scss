@@ -1,0 +1,24 @@
+.b-logo {
+	@include inlineBlock(middle);
+	padding-top: 10px;
+
+	&:hover {
+		.b-logo__icon {
+			fill: $red;
+		}
+	}
+
+	@include tablets-landscape {
+		padding-top: 6px;
+	}
+
+	@include tablets {
+		padding-top: 0;
+		height: 20px;
+	}
+}
+
+.b-logo__icon {
+	fill: $white;
+	transition: fill ease 0.3s;
+}
