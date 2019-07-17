@@ -24,11 +24,14 @@ $inputSearchBorder: #505050;
 @import "../components/burger/burger";
 @import "../components/logo/logo";
 @import "../components/menu/menu";
+@import "../components/button/button";
+@import "../components/slickSlider/slickSlider";
 
 // style
 @import "../pages/layout/_layout";
 @import "../pages/layout/_header";
 @import "../pages/index";
+@import "../pages/section/mainScreen";
 @import "../pages/layout/_footer";
 
 // media queris

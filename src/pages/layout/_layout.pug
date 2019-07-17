@@ -3,7 +3,7 @@ block config
 	include _config.pug
 
 //- Подключаем компоненты с миксинами
-
+include ../../components/button/button
 
 doctype html
 html(lang="ru-RU")
@@ -14,6 +14,7 @@ html(lang="ru-RU")
 
 		//css
 		block cssLinks
+			link(rel="stylesheet" href=cssPath+"/slick.css")
 			link(rel="stylesheet" href=cssPath+"/main.css")
 
 	body

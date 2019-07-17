@@ -1,5 +1,5 @@
 -
-mixin slickItem
+mixin slickItem()
 	.b-slider__item
 		if block
 			block
@@ -8,31 +8,38 @@ mixin slickItem
 
 
 .b-slider
-	.b-slider__content.j-slider
+	.b-slider__content.j-slider-main
 		+slickItem
-			.b-slider__item-flex
-				h2.b-slider__item-title We need the tonic of <br /> wildness
-				+button('#', 'Read more')(class="")
+			.b-slider__item-img(style="background-image: url(./img/mainSlide.jpg);")
+			.b-slider__item-img-mobile(style="background-image: url(./img/mainSlideMobile.jpg);")
+			.b-container
+				.b-slider__item-content
+					h2.b-slider__item-title TRAILHEAD WEAR <br />INDASTREE
+					p.b-slider__item-text С гордостью разработано и произведено в России
+					+button('#', 'Мужская одежда')(class="b-slider__item-button")
+					+button('#', 'Женская одежда')(class="b-slider__item-button")
 		+slickItem
-			.b-slider__item-flex
-				h2.b-slider__item-title We need the tonic of <br /> wildness
-				+button('#', 'Read more')(class="")
+			.b-slider__item-img(style="background-image: url(./img/mainSlide.jpg);")
+			.b-slider__item-img-mobile(style="background-image: url(./img/mainSlideMobile.jpg);")
+			.b-container
+				.b-slider__item-content
+					h2.b-slider__item-title TRAILHEAD WEAR <br />INDASTREE
+					p.b-slider__item-text С гордостью разработано и произведено в России
+					+button('#', 'Мужская одежда')(class="b-slider__item-button")
+					+button('#', 'Женская одежда')(class="b-slider__item-button")
 		+slickItem
-			.b-slider__item-flex
-				h2.b-slider__item-title We need the tonic of <br /> wildness
-				+button('#', 'Read more')(class="")
-		+slickItem
-			.b-slider__item-flex
-				h2.b-slider__item-title We need the tonic of <br /> wildness
-				+button('#', 'Read more')(class="")
-		+slickItem
-			.b-slider__item-flex
-				h2.b-slider__item-title We need the tonic of <br /> wildness
-				+button('#', 'Read more')(class="")
+			.b-slider__item-img(style="background-image: url(./img/mainSlide.jpg);")
+			.b-slider__item-img-mobile(style="background-image: url(./img/mainSlideMobile.jpg);")
+			.b-container
+				.b-slider__item-content
+					h2.b-slider__item-title TRAILHEAD WEAR <br />INDASTREE
+					p.b-slider__item-text С гордостью разработано и произведено в России
+					+button('#', 'Мужская одежда')(class="b-slider__item-button")
+					+button('#', 'Женская одежда')(class="b-slider__item-button")
 	.b-slider__controls
-		.b-slider__control.prev.j-prev
-			svg(width="31px" height="31")
-				use(xlink:href="#icon-arrowLeft")
-		.b-slider__control.next.j-next
-			svg(width="31px" height="31")
-				use(xlink:href="#icon-arrowRight")
+		.b-slider__control.prev.j-main-slide-prev
+			svg(width="16px" height="80px")
+				use(xlink:href="#icon-prev")
+		.b-slider__control.next.j-main-slide-next
+			svg(width="16px" height="80px")
+				use(xlink:href="#icon-next")

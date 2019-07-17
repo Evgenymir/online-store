@@ -1,46 +1,169 @@
+.b-slider {
+	position: relative;
+}
+
 .b-slider__content {}
 
 .b-slider__item {
+	height: 700px;
+	position: relative;
 	outline: 0;
-}
+	margin-bottom: -7px;
 
-.b-slider__item-flex {
-	@include flex(center);
-	flex-direction: column;
-	align-items: center;
-}
+	&:before {
+		content: "";
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: 0; right: 0;
+		bottom: 0; left: 0;
+		background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.65) 0%, rgba(0, 0, 0, 0) 100%);
+	}
 
-.b-slider__item-title {
-	@include o(bold);
-	width: 100%;
-	font-size: rem(40px);
-	color: $grey;
-	text-align: center;
-	line-height: 58px;
-	text-transform: uppercase;
-	margin: 0;
-	margin-bottom: 40px;
-
+	@include tablets-landscape {
+		height: 660px;
+	}
+	
 	@include tablets {
-		font-size: rem(30px);
-		line-height: 48px;
-		margin-bottom: 30px;
+		height: 450px;
 	}
 
 	@include mobile {
-		font-size: rem(24px);
-		line-height: 36px;
+		height: 118vw;
+
+		&:before {
+			background-image: none;
+		}
+	}
+}
+
+.b-slider__item-img {
+	@include bg(cover);
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: -1;
+
+	@include mobile {
+		display: none;
+	}
+}
+
+.b-slider__item-img-mobile {
+	@include bg(cover);
+	display: none;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: -1;
+
+	@include mobile {
+		display: block;
+	}
+}
+
+.b-slider__item-content {
+	width: 100%;
+	position: relative;
+	z-index: 1;
+	padding-top: 210px;
+
+	@include tablets-landscape {
+		padding-top: 170px;
+	}
+
+	@include tablets {
+		padding-top: 100px;
+	}
+
+	@include mobile {
+		background-color: rgba($black, 0.5);
+		text-align: center;
+		padding: 14px;
+		margin-top: 49%;
+	}
+}
+
+.b-slider__item-title {
+	@include bebas();
+	font-size: rem(82px);
+	color: $white;
+	line-height: 82px;
+	text-transform: uppercase;
+	margin: 0;
+	margin-bottom: 32px;
+
+	@include tablets-landscape {
+		font-size: rem(60px);
+		line-height: 60px;
+		margin-bottom: 25px;
+	}
+
+	@include tablets {
+		font-size: rem(40px);
+		line-height: 40px;
+		margin-bottom: 15px;
+	}
+
+	@include mobile {
+		font-size: rem(30px);
+		line-height: 30px;
+		margin-bottom: 12px;
+
+		br {
+			display: none;
+		}
+	}
+}
+
+.b-slider__item-text {
+	@include proxima(light);
+	font-size: rem(16px);
+	line-height: rem(16px);
+	color: $white;
+	text-transform: uppercase;
+	margin-bottom: 45px;
+
+	@include tablets {
+		font-size: rem(14px);
+		line-height: 14px;
+		margin-bottom: 35px;
+	}
+
+	@include mobile {
+		max-width: 205px;
+		line-height: 20px;
+		margin: 0 auto;
+	}
+}
+
+.b-slider__item-button {
+	margin-right: 24px;
+
+	&:last-child {
+		margin-right: 0;
+	}
+
+	@include mobile {
+		display: none;
 	}
 }
 
 .b-slider__dots {
 	@include reset-list();
 	text-align: center;
-	padding-top: 120px;
+	position: absolute;
+	bottom: 10px;
+	left: 0;
+	right: 0;
 
 	li {
 		@include inlineBlock(middle);
-		margin-right: 13px;
+		margin-right: 12px;
 
 		&:last-child {
 			margin-right: 0;
@@ -48,7 +171,7 @@
 
 		&.slick-active {
 			button {
-				background-color: #69728c;
+				background-color: $red;
 			}
 		}
 	}
@@ -56,35 +179,57 @@
 	button {
 		@include reset-button();
 		display: block;
-		width: 8px;
-		height: 8px;
+		width: 60px;
+		height: 4px;
 		background-color: $white;
+		opacity: 0.6;
 		text-indent: -99999px;
-		border-radius: 50%;
-	}
-
-	@include tablets {
-		padding-top: 80px;
 	}
 
 	@include mobile {
-		padding-top: 50px;
+		li {
+			margin-right: 6px;
+		}
+
+		button {
+			width: 50px;
+			height: 3px;
+		}
 	}
 }
 
-.b-slider__controls {
-	text-align: center;
-}
+
 
 .b-slider__control {
-	display: none;
+	width: 40px;
+	height: 80px;
+	position: absolute;
+	top: 50%;
+	margin-top: -40px;
 	cursor: pointer;
 
 	&.prev {
-		margin-right: 26px;
+		left: 15px;
 	}
 
-	&.slick-disabled {
-		opacity: 0.5;
+	&.next {
+		text-align: right;
+		right: 15px;
+	}
+
+	svg {
+		fill: $white;
+		transition: fill ease 0.3s;
+	}
+
+	&:hover {
+		svg {
+			fill: $red;
+		}
+	}
+
+	@include tablets {
+		visibility: hidden;
+		opacity: 0;
 	}
 }

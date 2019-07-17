@@ -97,17 +97,17 @@
 }
 
 @mixin laptop {
-    @media screen and (max-width: 1280px) {
+    @media screen and (max-width: 1390px) {
         @content;
     }
 }
 @mixin tablets-landscape {
-    @media screen and (max-width: 992px) {
+    @media screen and (max-width: 1090px) {
         @content;
     }
 }
 @mixin tablets {
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 850px) {
         @content;
     }
 }
