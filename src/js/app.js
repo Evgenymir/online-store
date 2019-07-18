@@ -4,6 +4,7 @@ import MainSlider from '../components/slickSlider/slickSlider.js';
 import AdvantagesSlider from '../pages/section/ourAdvantages.js';
 import LogoBrandsSlider from '../pages/section/logoBrands.js';
 import Tabs from '../components/tabs/tabs.js';
+import InstSlider from '../pages/section/weOnInstagramm.js';
 
 window.onload = () => {
 
@@ -39,6 +40,12 @@ window.onload = () => {
 	const tabsItem = document.querySelector('.j-tabs');
 	if(tabsItem) {
 		Tabs();
+	}
+
+	/* Подключаем слайдер инстаграм */
+	const InstSliderItem = document.querySelector('.j-instagram-slider');
+	if(InstSliderItem) {
+		InstSlider();
 	}
 
 };

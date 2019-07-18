@@ -1,0 +1,75 @@
+.b-instagram {
+	background-color: $blueLight;
+	padding-top: 38px;
+}
+
+.b-instagram-text {
+	@include proxima(light);
+	font-size: rem(16px);
+	color: $title;
+	line-height: 16px;
+	text-align: center;
+	margin-bottom: 33px;
+}
+
+.b-instagram-slider {
+	position: relative;
+}
+
+.b-instagram-slider__content {
+	height: 239px;
+	overflow: hidden;
+}
+
+.b-instagram-slider__item {
+	display: block;
+	height: 240px;
+	width: 239px;
+
+	@include tablets {
+		width: 245px;
+		height: 245px;
+	}
+}
+
+.b-instagram-slider__control {
+	width: 47px;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	background-color: rgba($black, .4);
+	text-align: center;
+	cursor: pointer;
+	transition: background ease 0.3s;
+
+	&.prev {
+		left: 0;
+	}
+
+	&.next {
+		right: 0;
+	}
+
+	svg {
+		position: absolute;
+		top: 50%;
+		left: 0;
+		right: 0;
+		margin: auto;
+		margin-top: -41px;
+		fill: $white;
+	}
+
+	&:hover {
+		background-color: rgba($black, .7);
+	}
+
+	@include tablets {
+		svg {
+			width: 14px;
+			height: 45px;
+			margin-top: -22px;
+		}
+	}
+}
