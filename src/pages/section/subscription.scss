@@ -1,0 +1,193 @@
+.b-subscription {
+	background-color: $blueLight;
+
+	@include mobile {
+		.b-container {
+			padding: 0;
+		}
+	}
+
+	@include mobile {
+		padding-bottom: 16px;
+	}
+}
+
+.b-subscription-flex {
+	@include flex(space-between);
+	align-items: center;
+
+	@include tablets-landscape {
+		display: block;
+	}
+}
+
+.b-subscription__left {
+	width: 57%;
+
+	@include laptop {
+		width: 50%;
+	}
+
+	@include tablets-landscape {
+		width: 100%;
+		padding: 14px 0;
+		text-align: center;
+	}
+}
+
+.b-subscription__title {
+	@include proxima(semibold);
+	font-size: rem(14px);
+	line-height: 16px;
+	color: #0A0400;
+	letter-spacing: 1.45px;
+	text-transform: uppercase;
+
+	@include mobile {
+		span {
+			display: none;
+		}
+	}
+}
+
+.b-subscription__right {
+	width: 43%;
+
+	@include laptop {
+		width: 50%;
+	}
+
+	@include tablets-landscape {
+		width: 100%;
+	}
+}
+
+.b-form-subscription {
+	@include flex(space-between);
+	align-items: center;
+	flex-wrap: nowrap;
+	background-color: $white;
+
+	@include mobile {
+		display: block;
+	}
+
+	@include mobile {
+		background-color: transparent;
+		text-align: center;
+	}
+}
+
+.b-form-subscription_white {
+	@include flex();
+	width: 72%;
+	background-color: $white;
+
+	@include tablets-landscape {
+		width: 79%;
+	}
+
+	@include mobile {
+		width: 100%;
+		margin-bottom: 16px;
+	}
+}
+
+.b-input-subscription-email {
+	width: 65%;
+	height: 40px;
+	font-size: rem(14px);
+	line-height: 17px;
+	color: #626161;
+	border: none;
+	background-color: $white;
+	padding: 0 15px;
+
+	@include placeholder {
+		color: #626161;
+	}
+
+	@include laptop {
+		width: 61%;
+	}
+
+	@include tablets-landscape {
+		width: 76%;
+	}
+
+	@include tablets {
+		width: 59%;
+	}
+
+	@include mobile {
+		width: 58%;
+		border-right: 1px solid #dedede;
+	}
+}
+
+.b-label-subscription-wrapper {
+	width: 34%;
+	min-width: 125px;
+	height: 40px;
+	background-color: $white;
+	padding-top: 8px;
+
+	@include tablets-landscape {
+		width: 23%;
+	}
+
+	@include mobile {
+		@include inlineBlock(middle);
+		width: 40%;
+		text-align: center;
+	}
+}
+
+.b-label-subscription {
+	@include proxima(light);
+	font-size: rem(14px);
+	line-height: 17px;
+	color: #232323;
+	letter-spacing: 0.35px;
+	margin-right: 13px;
+	cursor: pointer;
+}
+
+.b-input-subscription-radio {
+	display: none;
+
+	&:checked + .b-radioBox {
+		border-color: $red;
+		background-color: $white;
+	}
+}
+
+.b-radioBox {
+	@include inlineBlock();
+	width: 14px;
+	height: 14px;
+	background-color: #D8E1E5;
+	border: 4px solid transparent;
+	border-radius: 50%;
+	margin-top: 5px;
+	transition: border, background, ease 0.3s;
+}
+
+.b-input-subscription-text {
+	margin-left: 6px;
+}
+
+.b-form-subscription-button {
+	@include proxima(bold);
+	width: 160px;
+	height: 40px;
+	font-size: rem(12px);
+	line-height: 40px;
+	color: $white;
+	text-align: center;
+	text-transform: uppercase;
+	letter-spacing: 1.12px;
+	background-color: $black;
+	border: none;
+	cursor: pointer;
+}

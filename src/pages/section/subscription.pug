@@ -1,0 +1,20 @@
+.b-subscription
+	.b-container
+		.b-subscription-flex
+			.b-subscription__left
+				p.b-subscription__title подпишись и получи скидку 10% 
+					span на покупки в нашем интернет-магазине
+			.b-subscription__right
+				form.b-form-subscription(action="" method="POST" enctype="multipart/form-data")
+					.b-form-subscription_white
+						input.b-input-subscription-email(type="email" name="subscription-email" placeholder="Электронная почта" required)
+						.b-label-subscription-wrapper
+							label.b-label-subscription
+								input.b-input-subscription-radio(type="radio" name="gender")
+								span.b-radioBox
+								span.b-input-subscription-text Муж
+							label.b-label-subscription
+								input.b-input-subscription-radio(type="radio" name="gender")
+								span.b-radioBox
+								span.b-input-subscription-text Жен
+					button.b-form-subscription-button(type="submit") Подписаться
