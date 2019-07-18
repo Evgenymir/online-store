@@ -132,6 +132,17 @@
 		right: -35px;
 		text-align: right;
 	}
+
+	svg {
+		fill: #bec3c6;
+		transition: fill ease 0.3s;
+	}
+
+	&:hover {
+		svg {
+			fill: $red;
+		}
+	}
 }
 
 .b-slider-bestProducts-dots {

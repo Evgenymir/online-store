@@ -3,7 +3,7 @@ $containerWidth: 1320px;
 
 
 // setting style
-* {box-sizing: border-box;}
+*,*:before, *:after {box-sizing: border-box;}
 
 html {
 	font-size: 16px;
@@ -109,6 +109,7 @@ img.j-image-polyfill {
 	letter-spacing: 1.8px;
 	text-transform: uppercase;
 	text-align: center;
+	font-weight: inherit;
 	margin: 0;
 	margin-bottom: 18px;
 
@@ -124,5 +125,52 @@ img.j-image-polyfill {
 		line-height: 32px;
 		letter-spacing: 0.6px;
 		margin-bottom: 6px;
+	}
+}
+
+.b-button-custom {
+	@include inlineBlock();
+	position: relative;
+	width: 174px;
+	height: 40px;
+	font-size: rem(12px);
+	line-height: 40px;
+	color: $black;
+	text-align: center;
+	text-transform: uppercase;
+	text-decoration: none;
+	letter-spacing: 1px;
+	background-color: $white;
+	
+	&:before {
+		content: "";
+		width: 100%;
+		height: 12px;
+		border: 3px solid $red;
+		border-bottom: none;
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		transition: height ease 0.3s;
+	}
+
+	&:after {
+		content: "";
+		width: 100%;
+		height: 12px;
+		border: 3px solid $red;
+		border-top: none;
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		transition: height ease 0.3s;
+	}
+
+	&:hover {
+		&:before, &:after {
+			height: 50%;
+		}
 	}
 }

@@ -1,0 +1,141 @@
+.b-about-section {
+	text-align: center;
+	background-color: $white;
+	padding: 70px 0;
+
+	@include mobile {
+		padding: 15px 11px 27px;
+	}
+}
+
+.b-about-section-content-wrapper {
+	position: relative;
+
+	&:before {
+		content: "";
+		width: 1px;
+		height: 100%;
+		background-image: url(../img/dottBottom.png);
+		background-repeat: repeat-y;
+		background-size: contain;
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 0;
+	}
+
+	&:after {
+		content: "";
+		width: 1px;
+		height: 100%;
+		background-image: url(../img/dottBottom.png);
+		background-repeat: repeat-y;
+		background-size: contain;
+		position: absolute;
+		top: 0;
+		right: 0;
+		z-index: 0;
+	}
+}
+
+.b-about-section-content {
+	padding: 26px 0 52px;
+
+	&:before {
+		content: "";
+		width: 100%;
+		height: 1px;
+		background-image: url(../img/dottRight.png);
+		background-repeat: repeat-x;
+		background-size: contain;
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 0;
+	}
+
+	&:after {
+		content: "";
+		width: 100%;
+		height: 1px;
+		background-image: url(../img/dottRight.png);
+		background-repeat: repeat-x;
+		background-size: contain;
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		z-index: 0;
+	}
+}
+
+.b-about-section-content__title {
+	@include bebas(book);
+	font-size: rem(20px);
+	line-height: 24px;
+	color: #818181;
+	font-weight: inherit;
+	text-transform: uppercase;
+	letter-spacing: 0.5px;
+	margin: 0 auto;
+	margin-bottom: 6px;
+
+	@include mobile {
+		max-width: 185px;
+		margin-bottom: 16px;
+	}
+}
+
+.b-about-section-content__logo {
+	margin-bottom: 26px;
+
+	@include tablets-landscape {
+		svg {
+			width: 220px;
+			height: 40px;
+		}
+	}
+
+	@include mobile {
+		margin-bottom: 40px;
+
+		svg {
+			width: 230px;
+			height: 34px;
+		}
+	}
+}
+
+.b-about-section-content__text {
+	@include proxima(light);
+	max-width: 855px;
+	font-size: rem(14px);
+	line-height: 17px;
+	color: $greyDark;
+	margin: 0 auto;
+
+	@include tablets-landscape {
+		max-width: 660px;
+	}
+
+	@include tablets {
+		max-width: 350px;
+	}
+
+	@include mobile {
+		max-width: 90%;
+	}
+}
+
+.b-about-section-button-wrapper {
+	@include inlineBlock();
+	position: relative;
+	z-index: 1;
+	width: 220px;
+	text-align: center;
+	background-color: $white;
+	margin-top: -20px;
+}
+
+.b-about-section-button {
+	
+}
