@@ -1,0 +1,166 @@
+.b-tabs {}
+
+.b-tabs__tab {
+	@include reset-list();
+	position: relative;
+	text-align: center;
+	margin-bottom: 30px;
+
+	&:after {
+		content: "";
+		width: 100%;
+		height: 1px;
+		background-color: #dedede;
+		position: absolute;
+		bottom: 1px;
+		left: 0;
+		right: 0;
+		z-index: 0;
+	}
+}
+
+.b-tabs__tab-item {
+	@include inlineBlock(middle);
+	margin-right: 30px;
+
+	&:last-child {
+		margin-right: 0;
+	}
+
+	&.is-active {
+		.b-tabs__tab-link {
+			@include proxima(bold);
+			color: $black;
+
+			&:before {
+				width: 100%;
+			}
+		}
+	}
+
+	@include mobile {
+		margin-right: 16px;
+	}
+}
+
+.b-tabs__tab-link {
+	@include proxima(light);
+	position: relative;
+	display: block;
+	font-size: rem(14px);
+	color: #757474;
+	line-height: 17px;
+	letter-spacing: 1.2px;
+	text-transform: uppercase;
+	text-decoration: none;
+	padding-bottom: 6px;
+
+	&:before {
+		content: "";
+		width: 0;
+		height: 3px;
+		background-color: $red;
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		z-index: 1;
+		transition: width ease 0.3s;
+	}
+
+	&:hover {
+		&:before {
+			width: 15%;
+		}
+	}
+
+	@include mobile {
+		font-size: rem(12px);
+		line-height: 15px;
+		letter-spacing: 1px;
+	}
+}
+
+.b-tabs__content-item {
+	visibility: hidden;
+	opacity: 0;
+
+	&.is-active {
+		visibility: visible;
+		opacity: 1;
+
+		.b-slider-bestProducts__content {
+			height: auto;
+		}
+	}
+
+	.b-slider-bestProducts__content {
+		height: 0;
+		overflow: hidden;
+	}
+}
+
+.b-slider-bestProducts {
+	position: relative;
+}
+
+.b-slider-bestProducts__item {
+	@include mobile {
+		max-width: 275px;
+		margin: 0 auto;
+	}
+}
+
+.b-slider-bestProducts__controls {
+	@include tablets {
+		display: none;
+	}
+}
+
+.b-slider-bestProducts__control {
+	width: 25px;
+	height: 48px;
+	cursor: pointer;
+	position: absolute;
+	top: 50%;
+	margin-top: -24px;
+
+	&.prev {
+		left: -35px;
+	}
+
+	&.next {
+		right: -35px;
+		text-align: right;
+	}
+}
+
+.b-slider-bestProducts-dots {
+	@include reset-list();
+	text-align: center;
+	font-size: 0;
+	padding-top: 25px;
+
+	li {
+		@include inlineBlock(middle);
+		margin-right: 9px;
+
+		&:last-child {
+			margin-right: 0;
+		}
+
+		&.slick-active {
+			button {
+				background-color: $red;
+			}
+		}
+	}
+
+	button {
+		@include reset-button();
+		display: block;
+		width: 60px;
+		height: 4px;
+		background-color: $white;
+		text-indent: -99999px;
+	}
+}

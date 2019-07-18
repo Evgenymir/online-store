@@ -3,6 +3,7 @@ import Header from '../pages/layout/_header.js';
 import MainSlider from '../components/slickSlider/slickSlider.js';
 import AdvantagesSlider from '../pages/section/ourAdvantages.js';
 import LogoBrandsSlider from '../pages/section/logoBrands.js';
+import Tabs from '../components/tabs/tabs.js';
 
 window.onload = () => {
 
@@ -32,6 +33,12 @@ window.onload = () => {
 	const logoBrandsSliderItem = document.querySelector('.j-logoBrands-slider');
 	if(logoBrandsSliderItem) {
 		LogoBrandsSlider();
+	}
+
+	/* Подключаем Табы */
+	const tabsItem = document.querySelector('.j-tabs');
+	if(tabsItem) {
+		Tabs();
 	}
 
 };

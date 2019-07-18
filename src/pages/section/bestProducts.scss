@@ -1,0 +1,8 @@
+.b-bestProducts {
+	background-color: $blueLight;
+	padding: 47px 0 34px;
+
+	@include mobile {
+		padding: 32px 0;
+	}
+}

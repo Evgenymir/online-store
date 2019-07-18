@@ -45,6 +45,8 @@
 		margin-right: 2.3%;
 
 		.b-banners__item-link {
+			height: 309px;
+
 			&:first-child {
 				margin-bottom: 4.3%;
 			}
@@ -52,14 +54,26 @@
 
 		@include laptop {
 			height: 480px;
+
+			.b-banners__item-link {
+				height: 232px;
+			}
 		}
 
 		@include tablets-landscape {
 			height: 370px;
+
+			.b-banners__item-link {
+				height: 178px;
+			}
 		}
 
 		@include tablets {
 			height: 228px;
+
+			.b-banners__item-link {
+				height: 110px;
+			}
 		}
 
 		@include mobile {
@@ -79,8 +93,28 @@
 		width: 23.1%;
 
 		.b-banners__item-link {
+			height: 476px;
+
 			&:first-child {
 				margin-bottom: 10%;
+			}
+		}
+
+		@include laptop {
+			.b-banners__item-link {
+				height: 355px;
+			}
+		}
+
+		@include tablets-landscape {
+			.b-banners__item-link {
+				height: 273px;
+			}
+		}
+
+		@include tablets {
+			.b-banners__item-link {
+				height: 168px;
 			}
 		}
 
@@ -130,6 +164,7 @@
 
 	img {
 		display: block;
+		transition: transform ease 0.3s;
 
 		@include mobile {
 			display: none;
@@ -139,6 +174,30 @@
 
 .b-banners__item-link {
 	display: block;
+	position: relative;
+	overflow: hidden;
+
+	&:before {
+		content: "";
+		width: 30px;
+		height: 100%;
+		background-image: linear-gradient(to right, rgba($white, 0) 10%, rgba($white, 0.3) 30%, rgba($white, 0) 100%);
+		position: absolute;
+		top: 0;
+		left: -40%;
+		z-index: 1;
+		transform: skewX(-10deg);
+	}
+
+	&:hover {
+		&:before {
+			animation: bannerLine ease 0.5s;
+		}
+
+		img {
+			transform: scale(1.05);
+		}
+	}
 }
 
 img.b-banner-small {
@@ -146,5 +205,15 @@ img.b-banner-small {
 
 	@include mobile {
 		display: block;
+	}
+}
+
+@keyframes bannerLine {
+	0% {
+		left: -40%;
+	}
+
+	100% {
+		left: 140%;
 	}
 }

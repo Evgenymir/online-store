@@ -26,6 +26,8 @@ $inputSearchBorder: #505050;
 @import "../components/menu/menu";
 @import "../components/button/button";
 @import "../components/slickSlider/slickSlider";
+@import "../components/tabs/tabs";
+@import "../components/cardProduct/cardProduct";
 
 // style
 @import "../pages/layout/_layout";
@@ -35,6 +37,7 @@ $inputSearchBorder: #505050;
 @import "../pages/section/ourAdvantages";
 @import "../pages/section/banners";
 @import "../pages/section/logoBrands";
+@import "../pages/section/bestProducts";
 @import "../pages/layout/_footer";
 
 // media queris

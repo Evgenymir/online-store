@@ -1,0 +1,24 @@
+-
+mixin cardProduct(items)
+	each item in items
+		.b-card-product
+			img.b-card-product__logo(src=item.logoSrc alt=item.logoAlt)
+			a.b-card-product__img(href="#")
+				img.j-image-polyfill(src=item.imgSrc, alt=item.imgAlt)
+			a.b-card-product__title(href="#") #{item.title}
+			p.b-card-product__price #{item.price} 
+				strong &#8381;
+-;
+
+//- Для вставки
+
+//- +cardProduct([
+//- 	{
+//- 		'logoSrc': './img/companyLogo.png',
+//- 		'logoAlt': 'логотип компании',
+//- 		'imgSrc': './img/product/product1.jpg',
+//- 		'imgAlt': 'Продукт 1',
+//- 		'title': 'Футболка TRAILHEAD MTS-FASTER белая',
+//- 		'price': '17 359'
+//- 	}
+//- ])

@@ -1,0 +1,90 @@
+.b-card-product {
+	max-width: 302px;
+	position: relative;
+	text-align: center;
+	background-color: $white;
+	padding: 11px 11px 16px;
+
+	@include tablets-landscape {
+		max-width: 235px;
+	}
+
+	@include tablets {
+		max-width: 220px;
+	}
+
+	@include mobile {
+		max-width: 268px;
+		padding: 10px 10px 16px;
+	}
+}
+
+.b-card-product__logo {
+	width: 63px;
+	height: 30px;
+	position: absolute;
+	top: 19px;
+	left: 22px;
+	z-index: 1;
+
+	@include mobile {
+		width: 56px;
+		height: 26px;
+		top: 17px;
+		left: 20px;
+	}
+}
+
+.b-card-product__img {
+	display: block;
+	height: 378px;
+	overflow: hidden;
+	margin-bottom: 16px;
+
+	&:hover {
+		img {
+			transform: scale(1.1);
+		}
+	}
+
+	img {
+		transition: transform ease 0.5s;
+	}
+
+	@include tablets-landscape {
+		height: 270px;
+	}
+
+	@include mobile {
+		height: 335px;
+	}
+}
+
+.b-card-product__title {
+	@include proxima(light);
+	max-width: 230px;
+	display: block;
+	font-size: rem(14px);
+	line-height: 17px;
+	color: $black;
+	letter-spacing: 0.35px;
+	text-decoration: none;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 8px;
+
+	@include mobile {
+		max-width: 204px;
+		margin-bottom: 15px;
+	}
+}
+
+.b-card-product__price {
+	@include proxima(bold);
+	font-size: rem(18px);
+	color: $black;
+	line-height: 22px;
+	text-transform: uppercase;
+	letter-spacing: 0.9px;
+}

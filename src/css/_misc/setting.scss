@@ -100,3 +100,29 @@ img.j-image-polyfill {
 		max-width: 100%;
 	}
 }
+
+.b-title {
+	@include bebas();
+	font-size: rem(36px);
+	color: $title;
+	line-height: 40px;
+	letter-spacing: 1.8px;
+	text-transform: uppercase;
+	text-align: center;
+	margin: 0;
+	margin-bottom: 18px;
+
+	@include tablets-landscape {
+		font-size: rem(30px);
+		line-height: 34px;
+		letter-spacing: 1px;
+		margin-bottom: 10px;
+	}
+
+	@include mobile {
+		font-size: rem(26px);
+		line-height: 32px;
+		letter-spacing: 0.6px;
+		margin-bottom: 6px;
+	}
+}

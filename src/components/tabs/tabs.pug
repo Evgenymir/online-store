@@ -1,0 +1,125 @@
+//- Подключаем карточку продукта
+include ../cardProduct/cardProduct
+
+-
+mixin tab(items)
+	ul.b-tabs__tab
+		each item in items
+			li.b-tabs__tab-item.j-tab-item(class=item.class)
+				a.b-tabs__tab-link.j-tab-link(href="#") #{item.text}
+-;
+
+//- Для вставки
+.b-tabs.j-tabs
+	+tab([
+		{'text': 'Мужчинам', 'class': 'is-active'},
+		{'text': 'Женщинам', 'class': ''}
+	])
+	.b-container
+		.b-tabs__content
+			.b-tabs__content-item.j-tabs-content-item.is-active
+				.b-slider-bestProducts
+					.b-slider-bestProducts__content
+						.b-slider-bestProducts__item.j-slider-bestProducts
+							+cardProduct([
+								{
+									'logoSrc': './img/companyLogo.png',
+									'logoAlt': 'логотип компании',
+									'imgSrc': './img/product/product1.jpg',
+									'imgAlt': 'Продукт 1',
+									'title': 'Футболка TRAILHEAD MTS-FASTER белая',
+									'price': '17 359'
+								},
+								{
+									'logoSrc': './img/companyLogo.png',
+									'logoAlt': 'логотип компании',
+									'imgSrc': './img/product/product2.jpg',
+									'imgAlt': 'Продукт 2',
+									'title': 'Футболка TRAILHEAD MTS-FASTER белая',
+									'price': '17 359'
+								},
+								{
+									'logoSrc': './img/companyLogo.png',
+									'logoAlt': 'логотип компании',
+									'imgSrc': './img/product/product3.jpg',
+									'imgAlt': 'Продукт 3',
+									'title': 'Футболка TRAILHEAD MTS-FASTER белая',
+									'price': '17 359'
+								},
+								{
+									'logoSrc': './img/companyLogo.png',
+									'logoAlt': 'логотип компании',
+									'imgSrc': './img/product/product4.jpg',
+									'imgAlt': 'Продукт 4',
+									'title': 'Футболка TRAILHEAD MTS-FASTER белая',
+									'price': '17 359'
+								},
+								{
+									'logoSrc': './img/companyLogo.png',
+									'logoAlt': 'логотип компании',
+									'imgSrc': './img/product/product3.jpg',
+									'imgAlt': 'Продукт 3',
+									'title': 'Футболка TRAILHEAD MTS-FASTER белая',
+									'price': '17 359'
+								}
+							])
+					.b-slider-bestProducts__controls
+						.b-slider-bestProducts__control.prev.j-bestProducts-prev
+							svg(width="15px" height="48px")
+								use(xlink:href="#icon-prev-small")
+						.b-slider-bestProducts__control.next.j-bestProducts-next
+							svg(width="15px" height="48px")
+								use(xlink:href="#icon-next-small")
+			.b-tabs__content-item.j-tabs-content-item
+				.b-slider-bestProducts
+					.b-slider-bestProducts__content
+						.b-slider-bestProducts__item.j-slider-bestProducts-two
+							+cardProduct([
+								{
+									'logoSrc': './img/companyLogo.png',
+									'logoAlt': 'логотип компании',
+									'imgSrc': './img/product/product1.jpg',
+									'imgAlt': 'Продукт 1',
+									'title': 'Футболка TRAILHEAD MTS-FASTER белая',
+									'price': '17 359'
+								},
+								{
+									'logoSrc': './img/companyLogo.png',
+									'logoAlt': 'логотип компании',
+									'imgSrc': './img/product/product2.jpg',
+									'imgAlt': 'Продукт 2',
+									'title': 'Футболка TRAILHEAD MTS-FASTER белая',
+									'price': '17 359'
+								},
+								{
+									'logoSrc': './img/companyLogo.png',
+									'logoAlt': 'логотип компании',
+									'imgSrc': './img/product/product3.jpg',
+									'imgAlt': 'Продукт 3',
+									'title': 'Футболка TRAILHEAD MTS-FASTER белая',
+									'price': '17 359'
+								},
+								{
+									'logoSrc': './img/companyLogo.png',
+									'logoAlt': 'логотип компании',
+									'imgSrc': './img/product/product4.jpg',
+									'imgAlt': 'Продукт 4',
+									'title': 'Футболка TRAILHEAD MTS-FASTER белая',
+									'price': '17 359'
+								},
+								{
+									'logoSrc': './img/companyLogo.png',
+									'logoAlt': 'логотип компании',
+									'imgSrc': './img/product/product3.jpg',
+									'imgAlt': 'Продукт 3',
+									'title': 'Футболка TRAILHEAD MTS-FASTER белая',
+									'price': '17 359'
+								}
+							])
+					.b-slider-bestProducts__controls
+						.b-slider-bestProducts__control.prev.j-bestProducts-two-prev
+							svg(width="15px" height="48px")
+								use(xlink:href="#icon-prev-small")
+						.b-slider-bestProducts__control.next.j-bestProducts-two-next
+							svg(width="15px" height="48px")
+								use(xlink:href="#icon-next-small")
