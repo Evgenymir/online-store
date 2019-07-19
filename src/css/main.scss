@@ -30,6 +30,8 @@ $footer: #232323;
 @import "../components/tabs/tabs";
 @import "../components/cardProduct/cardProduct";
 @import "../components/social/social";
+@import "../components/mobileMenu/mobileMenu";
+@import "../components/overlay/overlay";
 
 // style
 @import "../pages/layout/_layout";
@@ -44,6 +46,7 @@ $footer: #232323;
 @import "../pages/section/weOnInstagramm";
 @import "../pages/section/subscription";
 @import "../pages/layout/_footer";
+@import "../pages/section/popup";
 
 // media queris
 @import "../css/adaptive/adaptive";

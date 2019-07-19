@@ -11,16 +11,16 @@ const clickBurger = () => {
 		let x = window.scrollX;
 		let y = window.scrollY;
 
-		mobileMenu.classList.add('active');
-		overlay.classList.add('active');
+		mobileMenu.classList.add('is-active');
+		overlay.classList.add('is-active');
 		window.onscroll = function() {
 			window.scrollTo(x, y);
 		};
 	};
 
 	const closeMenu = () => {
-		mobileMenu.classList.remove('active');
-		overlay.classList.remove('active');
+		mobileMenu.classList.remove('is-active');
+		overlay.classList.remove('is-active');
 		window.onscroll = function() {};
 	};
 

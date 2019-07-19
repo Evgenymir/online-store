@@ -1,19 +1,49 @@
 -
 mixin mobileMenu(items)
-	.b-mobileMenu.j-mobileMenu
-		//- .b-mobileMenu__close
-		//- 	.b-mobileMenu__close-line
-		//- 	.b-mobileMenu__close-line
-		ul.b-mobileMenu__list
-			each item in items
-				li.b-mobileMenu__item(class= {active : currentURL == item.href})
-					a.b-mobileMenu__link(href=item.href) #{item.title}
+	ul.b-mobileMenu__list
+		each item in items
+			li.b-mobileMenu__item(class= {active : currentURL == item.href})
+				a.b-mobileMenu__link(href=item.href) #{item.title}
+-;
+
+-
+mixin mobileSubMenu(items)
+	ul.b-mobileSubMenu__list
+		each item in items
+			li.b-mobileSubMenu__item
+				a.b-mobileSubMenu__link(href=item.href) #{item.title}
 -;
 
 //- Добавляем меню
-+mobileMenu([
-	{'title': 'About', 'href': 'index.html'},
-	{'title': 'Portfolio', 'href': '#portfolio'},
-	{'title': 'Services', 'href': '#services'},
-	{'title': 'Contact', 'href': '#contact'}
-])
+.b-mobileMenu.j-mobileMenu
+	.b-mobileMenu__close.j-mobileMenu__close
+		.b-mobileMenu__close-line
+		.b-mobileMenu__close-line
+	.b-mobileMenu-wrapper
+		form.b-mobileMenu-search(action="" method="get" enctype="multipart/form/data")
+			input.b-input-search(type="search" placeholder="Поиск")
+			button.b-button-search(type="submit")
+				svg.b-button-search__icon(width="22px" height="24px")
+					use(xlink:href="#icon-search")
+		+mobileMenu([
+			{'title': 'Мужское', 'href': 'index.html'},
+			{'title': 'Женское', 'href': '#'},
+			{'title': 'Sale', 'href': '#'},
+			{'title': 'О нас', 'href': '#'},
+			{'title': 'Контакты', 'href': '#'}
+		])
+		.b-mobileMenu-info
+			a.b-geolocation(href="#") Санкт-Петербург
+				svg.b-geolocation__icon(width="12px" height="16px")
+					use(xlink:href="#icon-mark")
+			.b-mobileMenu-contact
+				a.b-footer-tel(href="tel:88002223441") 8 (800) 
+					span 222-34-41
+				p.b-footer-timeWork пн-пт, 11:00–18:00
+		+mobileSubMenu([
+			{'title': 'Как сделать заказ', 'href': '#'},
+			{'title': 'Доставка', 'href': '#'},
+			{'title': 'Оплата', 'href': '#'},
+			{'title': 'Возврат и обмен', 'href': '#'},
+			{'title': 'Вакансии', 'href': '#'}
+		])

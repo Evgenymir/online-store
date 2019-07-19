@@ -1,0 +1,244 @@
+.b-popup {
+	position: absolute;
+	top: 20%;
+	left: -120%;
+	z-index: 10;
+	width: 415px;
+	background-color: $white;
+	padding-top: 40px;
+	transition: left ease 0.5s;
+	transform: translateX(-50%);
+
+	&.is-active {
+		left: 50%;
+	}
+
+	@include mobile {
+		width: 90%;
+		padding-top: 20px;
+	}
+}
+
+.b-popup-close {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 16px;
+	right: 16px;
+	z-index: 1;
+	cursor: pointer;
+}
+
+.b-popup-close__line {
+	width: 100%;
+	height: 2px;
+	background-color: $black;
+	position: absolute;
+	top: 8px;
+
+	&:first-child {
+		transform:rotate(45deg);
+	}
+
+	&:last-child {
+		transform:rotate(-45deg);
+	}
+}
+
+.b-popup-content {
+	padding-left: 14px;
+	padding-right: 14px;
+}
+
+.b-popup-title {
+	margin-bottom: 25px;
+}
+
+.b-popup-form__wrapper {
+	margin-bottom: 9px;
+
+	@include mobile {
+		margin-bottom: 5px;
+	}
+}
+
+.b-input {
+	width: 100%;
+	height: 35px;
+	font-size: rem(14px);
+	line-height: 16px;
+	color: #777777;
+	border: 1px solid #D4E4E3;
+	border-radius: 1px;
+	padding: 0 9px;
+
+	@include placeholder {
+		color: #777777;
+		opacity: 1;
+	}
+}
+
+.b-popup-form-password {
+	position: relative;
+
+	&:after {
+		@include bg(contain);
+		content: "";
+		width: 16px;
+		height: 6px;
+		background-image: url(../img/password.svg);
+		position: absolute;
+		top: 50%;
+		right: 15px;
+		margin-top: -3px;
+	}
+}
+
+.b-popup-form__captcha {
+	padding-top: 7px;
+	padding-bottom: 16px;
+
+	@include mobile {
+		padding: 5px 0;
+	}
+}
+
+.b-checkbox-wrapper {
+	display: block;
+	margin-bottom: 25px;
+	cursor: pointer;
+
+	@include mobile {
+		margin-bottom: 15px;
+	}
+}
+
+.b-checkbox {
+	display: none;
+
+	&:checked + .b-checkbox-box {
+		&:before {
+			opacity: 1;
+		}
+	}
+}
+
+.b-checkbox-box {
+	@include inlineBlock(middle);
+	position: relative;
+	width: 15px;
+	height: 15px;
+	background-color: $red;
+	margin-right: 7px;
+
+	&:before {
+		content: "";
+		width: 11px;
+		height: 5px;
+		position: absolute;
+		top: 3px;
+		left: 2px;
+		border: 1px solid $white;
+		border-right: none;
+		border-top: none;
+		transform: rotate(-45deg);
+		opacity: 0;
+		transition: opacity ease 0.3s;
+	}
+}
+
+.b-checkbox-text {
+	@include inlineBlock(middle);
+	font-size: rem(14px);
+	line-height: 17px;
+	color: $black;
+}
+
+.b-popup-form__button {
+	@include proxima(semibold);
+	width: 100%;
+	height: 40px;
+	font-size: rem(12px);
+	line-height: 12px;
+	color: $white;
+	text-transform: uppercase;
+	letter-spacing: 0.5px;
+	background-color: #131313;
+	border: none;
+	cursor: pointer;
+
+	&:focus {
+		outline: 0;
+	}
+}
+
+.b-popup-form__consent {
+	font-size: rem(12px);
+	line-height: 18px;
+	color: #5D6F75;
+	padding: 16px 0;
+}
+
+.b-popup-entry {
+	@include flex();
+	align-items: center;
+	background-color: #E8EFF5;
+	padding: 16px;
+
+	span {
+		@include inlineBlock(middle);
+	}
+
+	@include mobile {
+		display: block;
+		text-align: center;
+	}
+}
+
+.b-popup-entry__item {
+	@include proxima(light);
+	font-size: rem(14px);
+	line-height: 15px;
+	color: $black;
+	text-decoration: none;
+	display: block;
+
+	&:first-child {
+		@include proxima(semibold);
+		font-size: rem(12px);
+		line-height: 12px;
+		text-transform: uppercase;
+		width: 154px;
+	}
+
+	&:last-child {
+		margin-left: 16px;
+	}
+
+	@include mobile {
+		&:first-child {
+			width: 100%;
+			margin-bottom: 20px;
+		}
+
+		&:nth-child(2) {
+			@include inlineBlock();
+		}
+
+		&:last-child {
+			@include inlineBlock();
+			margin-left: 16px;
+		}
+	}
+}
+
+.b-popup-entry__item-icon {
+	width: 37px;
+	height: 37px;
+	background-color: #A7B6BB;
+	border-radius: 50%;
+	text-align: center;
+	fill: $white;
+	padding-top: 8px;
+	margin-right: 5px;
+}

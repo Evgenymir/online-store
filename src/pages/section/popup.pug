@@ -1,0 +1,43 @@
+.b-popup.j-popup-registration
+	.b-popup-close.j-popup-close-registration
+		.b-popup-close__line
+		.b-popup-close__line
+	.b-popup-title.b-title Регистрация
+	.b-popup-content
+		form.b-popup-form(action="" method="post" enctype="multipart/form-data")
+			.b-popup-form__wrapper
+				input.b-input(type="text" name="family-name" placeholder="Фамилия *" required)
+			.b-popup-form__wrapper
+				input.b-input(type="text" name="name" placeholder="Имя *" required)
+			.b-popup-form__wrapper
+				input.b-input(type="text" name="middle-name" placeholder="Отчество *" required)
+			.b-popup-form__wrapper
+				input.b-input(type="tel" name="tel" placeholder="Номер телефона *" required)
+			.b-popup-form__wrapper
+				input.b-input(type="email" name="email" placeholder="Email")
+			.b-popup-form__wrapper.b-popup-form-password
+				input.b-input(type="password" name="password" placeholder="Пароль")
+			.b-popup-form__wrapper.b-popup-form-password
+				input.b-input(type="password" name="password-repeat" placeholder="Повторите пароль")
+			.b-popup-form__captcha
+				img(src="./img/captcha.jpg", alt="Картинка")
+			label.b-checkbox-wrapper
+				input.b-checkbox(type="checkbox")
+				span.b-checkbox-box
+				span.b-checkbox-text Подписаться на новости
+			button.b-popup-form__button(type="submit") Зарегистрироваться
+			.b-popup-form__consent
+				p Нажимая кнопку &laquo;Зарегистрироваться&raquo;, Вы даете согласие на обработку своих персональных данных
+	.b-popup-entry
+		.b-popup-entry__item
+			p Войти с помощью:
+		a.b-popup-entry__item(href="#")
+			span.b-popup-entry__item-icon
+				svg(width="20px" height="20px")
+					use(xlink:href="#icon-vk")
+			span Vkontakte
+		a.b-popup-entry__item(href="#")
+			span.b-popup-entry__item-icon
+				svg(width="20px" height="20px")
+					use(xlink:href="#icon-fb")
+			span Facebook

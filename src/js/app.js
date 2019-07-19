@@ -1,5 +1,6 @@
 import objectFitImages from 'object-fit-images'; // => Полифил для картинок с object-fit 
 import Header from '../pages/layout/_header.js';
+import BurgerClick from '../components/burger/burger.js';
 import MainSlider from '../components/slickSlider/slickSlider.js';
 import AdvantagesSlider from '../pages/section/ourAdvantages.js';
 import LogoBrandsSlider from '../pages/section/logoBrands.js';
@@ -16,6 +17,12 @@ window.onload = () => {
 	const headerItem = document.querySelector('.j-header-discount');
 	if(headerItem) {
 		Header();
+	}
+
+	/* Подключаем клик по бургеру */
+	const burgerItem = document.querySelector('.j-burger');
+	if(burgerItem) {
+		BurgerClick();
 	}
 
 	/* Подключаем слайдер на главном экране */
