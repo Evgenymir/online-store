@@ -6,6 +6,8 @@ const logoBanners = () => {
 	$('.j-logoBrands-slider').slick({
 		slidesToShow: 6,
   		slidesToScroll: 1,
+  		autoplay: true,
+  		autoplaySpeed: 2000,
   		prevArrow: $('.j-logoBrands-prev'),
   		nextArrow: $('.j-logoBrands-next'),
   		responsive: [

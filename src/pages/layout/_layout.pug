@@ -18,20 +18,18 @@ html(lang="ru-RU")
 			link(rel="stylesheet" href=cssPath+"/main.css")
 
 	body
-		.b-body.j-body
+		// Шапка
 		
-			// Шапка
-			
-			header.l-header
-				include _header.pug
+		header.l-header
+			include _header.pug
 
-			// Контент
-			main.l-content
-				block content
+		// Контент
+		main.l-content
+			block content
 
-			// Подвал
-			footer.l-footer
-				include _footer.pug
+		// Подвал
+		footer.l-footer
+			include _footer.pug
 
 		// Всплывающие окна
 		include ../section/popup
