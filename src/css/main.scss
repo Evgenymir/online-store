@@ -12,6 +12,7 @@ $title: #131313;
 $red: #cc1e2c;
 $brown: #4f4f4f;
 $inputSearchBorder: #505050;
+$footer: #232323;
 
 // layout
 @import "_misc/font";
@@ -28,6 +29,7 @@ $inputSearchBorder: #505050;
 @import "../components/slickSlider/slickSlider";
 @import "../components/tabs/tabs";
 @import "../components/cardProduct/cardProduct";
+@import "../components/social/social";
 
 // style
 @import "../pages/layout/_layout";

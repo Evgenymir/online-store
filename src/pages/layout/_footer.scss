@@ -1,0 +1,316 @@
+a.b-footer-logo-mobile {
+	display: none;
+	fill: $greyDark;
+	font-size: 0;
+
+	@include mobile {
+		@include inlineBlock();
+		margin-bottom: 32px;
+	}
+}
+
+.b-footer-wrapper {
+	@include flex(space-between);
+	position: relative;
+
+	@include tablets {
+		margin-bottom: 40px;
+	}
+
+	@include mobile {
+		margin-bottom: 16px;
+	}
+}
+
+.b-footer__list {
+	@include flex(space-between);
+	width: 76%;
+	margin-right: 7%;
+
+	@include tablets-landscape {
+		width: 77%;
+		justify-content: flex-start;
+		margin-right: 0;
+	}
+
+	@include tablets {
+		width: 100%;
+	}
+
+	@include mobile {
+		border-top: 1px solid $black;
+		border-bottom: 1px solid $black;
+		padding-top: 24px;
+		padding-bottom: 16px;
+	}
+}
+
+.b-footer__item {
+	@include tablets-landscape {
+		width: 33.3%;
+		margin-bottom: 20px;
+	}
+
+	@include tablets {
+		width: 50%;
+		text-align: center;
+	}
+
+	@include mobile {
+		width: 100%;
+		margin-bottom: 16px;
+	}
+}
+
+.b-footer__item-title {
+	@include proxima(bold);
+	display: block;
+	font-size: rem(12px);
+	line-height: 15px;
+	color: $white;
+	text-transform: uppercase;
+	text-decoration: none;
+	letter-spacing: 1.12px;
+
+	@include mobile {
+		font-size: rem(14px);
+		line-height: 17px;
+	}
+}
+
+.b-footer-menu-list {
+	@include reset-list();
+	padding-top: 16px;
+
+	@include mobile {
+		display: none;
+	}
+}
+
+.b-footer-menu-item {
+	font-size: 0;
+	margin-bottom: 8px;
+}
+
+.b-footer__item-link {
+	@include inlineBlock();
+	font-size: rem(12px);
+	line-height: 14px;
+	color: #9D9C9C;
+	text-decoration: none;
+	border-bottom: 1px solid transparent;
+	transition: border ease 0.3s;
+	padding-bottom: 1px;
+
+	&:hover {
+		border-color: #9D9C9C;
+	}
+}
+
+.b-footer__info {
+	width: 17%;
+
+	@include tablets-landscape {
+		width: 23%;
+	}
+
+	@include tablets {
+		position: absolute;
+		bottom:28px;
+		right: 0;
+		width: 50%;
+		text-align: center;
+	}
+
+	@include mobile {
+		position: static;
+		width: 100%;
+		padding-top: 32px;
+	}
+}
+
+.b-footer-logo {
+	display: block;
+	fill: $greyDark;
+	margin-bottom: 35px;
+
+	@include tablets {
+		margin-bottom: 15px;
+	}
+
+	@include mobile {
+		display: none;
+	}
+}
+
+.b-footer-contact {
+	margin-bottom: 25px;
+
+	@include tablets {
+		margin-bottom: 15px;
+	}
+}
+
+.b-footer-tel {
+	@include proxima(light);
+	display: block;
+	font-size: rem(27px);
+	line-height: 31px;
+	color: $white;
+	text-decoration: none;
+	text-transform: uppercase;
+	margin-bottom: 10px;
+
+	span {
+		@include proxima(semibold);
+	}
+
+	@include laptop {
+		font-size: rem(20px);
+	}
+
+	@include mobile {
+		font-size: rem(24px);
+		line-height: 29px;
+		margin-bottom: 16px;
+	}
+}
+
+.b-footer-timeWork {
+	@include proxima(thin);
+	font-size: rem(14px);
+	line-height: 17px;
+	color: #757474;
+	margin-bottom: 10px;
+
+	@include mobile {
+		color: #C4C4C4;
+		margin-bottom: 15px;
+	}
+}
+
+.b-footer-email {
+	display: block;
+	@include proxima(thin);
+	font-size: rem(14px);
+	line-height: 17px;
+	color: #757474;
+	text-decoration: none;
+	transition: color ease 0.3s;
+
+	&:hover {
+		color: $white;
+	}
+
+	@include mobile {
+		color: #C4C4C4;
+	}
+}
+
+.b-footer-copyright {
+	@include flex();
+	width: 83%;
+	margin-top: -15px;
+
+	@include laptop {
+		width: 78%;
+	}
+
+	@include tablets-landscape {
+		width: 100%;
+		margin-top: 0;
+	}
+
+	@include tablets {
+		display: block;
+	}
+}
+
+.b-full-version {
+	@include proxima(light);
+	display: none;
+	font-size: rem(12px);
+	line-height: 15px;
+	color: #757474;
+	text-transform: uppercase;
+	text-decoration: none;
+	text-align: center;
+	margin-bottom: 15px;
+
+	@include mobile {
+		display: block;
+	}
+}
+
+.b-footer-copyright__text {
+	@include proxima(light);
+	width: 64%;
+	font-size: rem(12px);
+	line-height: 16px;
+	color: #757474;
+	margin-right: 12.5%;
+
+	@include tablets-landscape {
+		width: 71%;
+		margin-right: 5%;
+	}
+
+	@include tablets {
+		width: 100%;
+		text-align: center;
+		margin-bottom: 15px;
+	}
+
+	@include mobile {
+		font-size: rem(10px);
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+}
+
+.b-footer-copyright__reka {
+	@include proxima(light);
+	width: 23.5%;
+	font-size: rem(12px);
+	line-height: 14px;
+	color: #757474;
+
+	@include tablets {
+		width: 100%;
+		text-align: center;
+	}
+
+	@include mobile {
+		background-color: #1D1D1D;
+		padding-top: 12px;
+		padding-bottom: 14px;
+	}
+}
+
+.b-footer-copyright__reka-made {
+	@include tablets {
+		@include inlineBlock();
+		padding-top: 4px;
+		margin-right: 8px;
+	}
+
+	@include mobile {
+		margin-right: 5px;
+	}
+}
+
+.b-footer-copyright__reka-logo {
+	@include proxima(bold);
+	display: block;
+	color: #757474;
+	text-decoration: none;
+	padding-top: 5px;
+
+	@include tablets {
+		@include inlineBlock();
+	}
+
+	@include mobile {
+		@include proxima();
+	}
+}

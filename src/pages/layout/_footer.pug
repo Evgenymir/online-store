@@ -1,0 +1,101 @@
+//- Миксины
+-
+mixin footerItem()
+	.b-footer__item
+		if block
+			block
+		else
+-;
+-
+mixin footerMenuList()
+	ul.b-footer-menu-list
+		if block
+			block
+		else
+-;
+-
+mixin footerMenuItem()
+	li.b-footer-menu-item
+		if block
+			block
+		else
+-;
+-
+mixin footerItemTitle(title)
+	a.b-footer__item-title(href="#")= title
+-;
+
+mixin footerItemLink(link)
+	a.b-footer__item-link(href="#")= link
+-;
+
+//- Начало контента
+
+.b-container
+	a.b-footer-logo-mobile(href="#")
+		svg.b-footer-logo__icon(width="162px" height="24px")
+			use(xlink:href="#icon-logo")
+	.b-footer-wrapper
+		.b-footer__list
+			+footerItem()
+				+footerItemTitle('Ассортимент')
+				+footerMenuList()
+					+footerMenuItem()
+						+footerItemLink('Женское')
+					+footerMenuItem()
+						+footerItemLink('Мужское')
+					+footerMenuItem()
+						+footerItemLink('Sale')
+			+footerItem()
+				+footerItemTitle('Помощь')
+				+footerMenuList()
+					+footerMenuItem()
+						+footerItemLink('Как подобрать размер?')
+					+footerMenuItem()
+						+footerItemLink('Как оформить заказ?')
+			+footerItem()
+				+footerItemTitle('О компании')
+				+footerMenuList()
+					+footerMenuItem()
+						+footerItemLink('О нас')
+					+footerMenuItem()
+						+footerItemLink('Адреса магазинов')
+					+footerMenuItem()
+						+footerItemLink('Вакансии')
+			+footerItem()
+				+footerItemTitle('Информаци')
+				+footerMenuList()
+					+footerMenuItem()
+						+footerItemLink('Политика конфиденциальности')
+			+footerItem()
+				+footerItemTitle('Покупателю')
+				+footerMenuList()
+					+footerMenuItem()
+						+footerItemLink('Связаться с нами')
+					+footerMenuItem()
+						+footerItemLink('Обменять или вернуть товар')
+					+footerMenuItem()
+						+footerItemLink('Доставка')
+					+footerMenuItem()
+						+footerItemLink('Оплата')
+					+footerMenuItem()
+						+footerItemLink('Частые вопросы по заказам')
+					+footerMenuItem()
+						+footerItemLink('Отследить заказ')
+		.b-footer__info
+			a.b-footer-logo(href="#")
+				svg.b-footer-logo__icon(width="135px" height="24px")
+					use(xlink:href="#icon-logo")
+			.b-footer-contact
+				a.b-footer-tel(href="tel:88002223441") 8 (800) 
+					span 222-34-41
+				p.b-footer-timeWork пн-пт, 11:00–18:00
+				a.b-footer-email(href="mailto:shop@34play.me") shop@34play.me
+			include ../../components/social/social
+	.b-footer-copyright
+		.b-footer-copyright__text
+			p &copy; 2010–2019, 34PLAY.ME - Официальный интернет магазин 34 PLAY. Использование материалов 34play.me разрешено только с предварительного согласия правообладателей. Все права на фотографии и тексты принадлежат 34play.me.
+		a.b-full-version(href="#") Полная версия сайта
+		.b-footer-copyright__reka
+			p.b-footer-copyright__reka-made Сделано в
+			a.b-footer-copyright__reka-logo(href="#") REKA Digital Agency

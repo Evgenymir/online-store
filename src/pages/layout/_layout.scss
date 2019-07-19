@@ -1,0 +1,17 @@
+.l-footer {
+	background-color: $footer;
+	padding: 40px 0 57px;
+
+	@include tablets-landscape {
+		padding-bottom: 40px;
+	}
+
+	@include mobile {
+		text-align: center;
+		padding: 32px 0 0;
+
+		.b-container {
+			padding: 0;
+		}
+	}
+}

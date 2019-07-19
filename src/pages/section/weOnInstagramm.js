@@ -4,6 +4,8 @@ import slick from 'slick-carousel';
 const instSlider = () => {
 
 	$('.j-instagram-slider').slick({
+		autoplay: true,
+		autoplaySpeed: 2000,
 		slidesToShow: 8,
   		slidesToScroll: 1,
   		prevArrow: $('.j-instagram-prev'),
